@@ -1,0 +1,611 @@
+@font-face {
+  font-family: "mainB";
+  src: url("./assets/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+  font-family: "mainM";
+  src: url("./assets/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+  font-family: "mainR";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf");
+}
+
+* {
+  font-family: "mainR";
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  outline: none;
+}
+
+p {
+  font-size: 16px;
+  font-family: "mainR";
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(231, 100%, 99%);
+  z-index: -100000;
+  position: relative;
+}
+
+main {
+  height: 80%;
+  padding: 10px;
+  z-index: -2;
+  background-color: white;
+  width: 75%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0px 1px 20px 0 #0000004a;
+  max-height: 640px;
+}
+
+main aside {
+  position: relative;
+  box-sizing: border-box;
+  width: 274px;
+  height: 100%;
+  padding: 20px;
+}
+main aside .bg {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+main aside .bg .desktop {
+  height: 100%;
+}
+
+main aside ul {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+main aside ul li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+main aside ul li .num {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid white;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+main aside ul li .text h4 {
+  color: white;
+}
+main aside ul li .text h5 {
+  color: hsl(228, 100%, 84%);
+  font-family: "mainR";
+  font-weight: 400;
+}
+
+main aside ul li.active .num {
+  background-color: hsl(206, 94%, 87%);
+  border: none;
+  color: black;
+}
+
+main section {
+  padding: 30px 70px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+main section h1 {
+  font-family: "mainB";
+  font-size: 35px;
+  color: hsl(213, 96%, 18%);
+}
+
+main section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main section {
+  display: none;
+}
+main .now {
+  display: flex;
+}
+
+main .one form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .one form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .one form div input {
+  padding: 15px;
+  width: calc(100% - 15px);
+  border: 0.5px solid hsl(231, 11%, 63%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+main .one form div label {
+  font-family: "mainM";
+  color: hsl(213, 96%, 18%);
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .one form div label span {
+  color: hsl(354, 84%, 57%);
+  font-size: 14px;
+  font-family: "mainB";
+  display: none;
+}
+
+main section .next {
+  padding: 15px 20px;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  font-family: "mainM";
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+main section .next:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+
+main section .back {
+  background-color: transparent;
+  color: hsl(231, 9%, 57%);
+  font-family: "mainB";
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  width: fit-content;
+}
+
+main section .back:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+main section .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+main .two {
+  gap: 30px;
+}
+
+main .two .plans {
+  display: flex;
+  justify-content: space-between;
+}
+main .two .plans button {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid hsl(231, 9%, 57%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 25%;
+  gap: 50px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  min-width: 100px;
+}
+main .two .plans button:hover {
+  background-color: hsl(228, 100%, 84%);
+  border-color: hsl(243, 100%, 62%);
+}
+main .two .plans .arcade {
+  background-color: hsl(228, 100%, 84%);
+  border-color: hsl(243, 100%, 62%);
+}
+main .two .plans button .hs {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: start;
+  gap: 5px;
+}
+main .two .plans button .hs .year,
+main .two .plans button .hs .free {
+  display: none;
+}
+main .two .plans button h4 {
+  font-family: "mainM";
+  color: hsl(213, 96%, 18%);
+}
+main .two .plans button h5 {
+  font-family: "mainM";
+  color: hsl(231, 9%, 57%);
+}
+main .two .choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
+}
+main .two .choose label {
+  font-family: "mainM";
+  color: hsl(231, 9%, 57%);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.dot {
+  height: 18px;
+  aspect-ratio: 1;
+  background-color: white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 3.5px;
+}
+main .two .choose .slider {
+  width: 50px;
+  height: 25px;
+  padding: 2px;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  position: relative;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  background-color: hsl(213, 96%, 18%);
+  cursor: pointer;
+}
+main .three .addons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+main .three .addons > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: calc(100% - 30px);
+  padding: 15px;
+  border: hsl(231, 9%, 57%) 1px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+main .three .addons > div .mid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .three .addons > div .mid p {
+  font-size: 0.9rem;
+}
+main .three .addons > div .mid h4 {
+  color: hsl(213, 96%, 18%);
+  font-family: "mainM";
+}
+main .three .addons > div .price {
+  margin-left: auto;
+  color: hsl(243, 100%, 62%);
+}
+main .three .addons > div input {
+  width: 17px;
+  aspect-ratio: 1;
+  accent-color: hsl(243, 100%, 62%);
+  cursor: pointer;
+}
+main .three .addons > div.active {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(228, 100%, 84%, 0.5);
+}
+main .four .up .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .four .up .top .left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+main .four .up .top h4 {
+  color: hsl(213, 96%, 18%);
+  font-family: "mainM";
+}
+main .four .up .top .change {
+  background-color: transparent;
+  text-decoration: underline;
+  color: hsl(231, 9%, 57%);
+  cursor: pointer;
+}
+main .four .up .top .change:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  color: hsl(243, 100%, 62%);
+}
+main .four .up .top .price {
+  color: hsl(213, 96%, 18%);
+  font-family: "mainB";
+  font-size: 1rem;
+}
+main .four .up {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: hsl(231, 11%, 63%, 0.1);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+main .four .up hr {
+  border-color: hsl(231, 9%, 57%, 0.3);
+  width: 100%;
+  border-width: 0.5px;
+  height: 0px;
+  border-style: solid;
+}
+main .four .up .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .four .up .bottom > div h5 {
+  color: hsl(231, 9%, 57%);
+  font-family: "mainR";
+}
+main .four .up .bottom > div .price {
+  font-size: 0.9rem;
+  color: hsl(213, 96%, 18%);
+}
+main .four .up .bottom > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .four .total h5 {
+  color: hsl(231, 9%, 57%);
+  font-family: "mainR";
+}
+main .four .total .total-price {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.1rem;
+  font-family: "mainB";
+}
+main .four .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+main .four .next {
+  background-color: hsl(243, 100%, 62%);
+  padding: 15px 25px;
+}
+main .four .next:hover {
+  opacity: 0.5;
+}
+
+main .five {
+  justify-content: center;
+  align-items: center;
+}
+main .five .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: auto;
+  width: 100%;
+}
+main .five .main * {
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 0;
+    display: block;
+  }
+  main {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    background-color: hsl(206, 94%, 87%);
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
+    position: absolute;
+    max-height: none;
+  }
+  main aside .mobile {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+  }
+  main aside .desktop {
+    display: none;
+  }
+  main aside {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main aside .bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 0;
+  }
+  main aside ul li .text {
+    display: none;
+  }
+  main aside ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  main section {
+    background-color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    z-index: 1;
+    margin-top: calc(-1 * 20%);
+    min-height: 450px;
+    box-sizing: border-box;
+    padding: 30px;
+    height: fit-content;
+  }
+  main section .btns {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 20px;
+    width: calc(100% - 40px);
+    flex-direction: row;
+  }
+
+  main .two .plans {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  main .two .plans button {
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    width: 90%;
+  }
+  main .two .choose {
+    border-radius: 10px;
+    align-self: center;
+    width: 90%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
